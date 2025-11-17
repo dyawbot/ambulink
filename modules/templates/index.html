@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sensor Data Display</title>
+    <style>
+        /* CSS styles */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: auto;
+            padding: 0;
+            display: inline;
+            justify-content: center; 
+            align-items: center;
+            height: 300vh;
+            /* display: table-cell; */
+    vertical-align: middle;
+        }
+        .container {
+            text-align: center;
+            margin-bottom: 20px; /* Add some space between elements */
+        }
+        h1 {
+            color: #333;
+            font-size: 2rem;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        p {
+            color: #666;
+            font-size: 1.2rem;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header section -->
+    <header>
+        <h1>Sensor Display Control</h1>
+    </header>
+
+    <!-- Main content section -->
+    <main>
+        <!-- Sensor data will be displayed here -->
+        <div id="sensorData"></div>
+    </main>
+
+    <!-- Footer section -->
+    <footer class="container">
+        <p>SYSTEM ACTIVATED</p>
+    </footer>
+
+    <!-- JavaScript code -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.0.0/socket.io.js"></script>
+    <!-- <script>
+        // Connect to the Socket.IO server
+        var socket = io.connect('http://' + document.domain + ':' + location.port);
+
+        // Event handler for receiving sensor data updates
+        socket.on('sensor_update', function(data) {
+            // Display the sensor data in the 'sensorData' div
+            document.getElementById('sensorData').innerHTML = `
+                <p>Temperature: ${data.temperature}°C</p>
+                <p>Humidity: ${data.humidity}%</p>
+            `;
+        });
+    </script> -->
+</body>
+</html>
